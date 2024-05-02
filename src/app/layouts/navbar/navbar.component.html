@@ -1,0 +1,72 @@
+<div class="bg-[#333333] text-white">
+    <nav class="flex justify-between items-center lg:py-5 lg:mx-28">
+        <div class="flex items-center">
+            <img class="w-16 lg:w-12 cursor-pointer" src="../../../assets/images/png/logo.png" alt="...">
+            <div #navLinks
+                class=" z-30 nav-links bg-[#333333] duration-500 md:static absolute text-white font-bold md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-4">
+                    <li class="lg:hidden md:hidden">
+                        <div class="flex items-center">
+                            <div class="relative cursor-pointer">
+                                <mat-icon class="text-[#A8A8A8] text-[27px]">notifications_none</mat-icon>
+                                <div class="absolute top-[-10px] bg-[red] rounded-full right-[-8px] py-[2px] px-[8px] w-[23px] text-[12px]">3</div>
+                            </div>
+                            <select class="bg-transparent text-[#A8A8A8] font-semibold px-4 text-[14px] outline-none cursor-pointer"
+                                value="SREEKUMAR">
+                                <option selected>SREEKUMAR</option>
+                                <option value="s">s</option>
+                                <option value="a">a</option>
+                            </select>
+                            <div
+                                class="text-[#A8A8A8] font-semibold text-[14px] mb-0 border-l-2 border-[#A8A8A8] px-4 mx-2 cursor-pointer">
+                                العربية</div>
+                        </div>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="text-[#A8A8A8]">DASHBOARD</a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="text-[#A8A8A8]">MANAGE</a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="text-[#A8A8A8]">PAY</a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="text-[#A8A8A8]">ORDER</a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="text-[#A8A8A8]">SERVICES</a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="text-[#A8A8A8]">SUPPORT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <div class="lg:hidden md:hidden">
+                <button mat-button (click)="openMenu()" name="menu" class="text-3xl cursor-pointer md:hidden">
+                    <mat-icon class="text-white">menu</mat-icon>
+                </button>
+            </div>
+            <div class="hidden lg:flex items-center">
+                <div class="relative cursor-pointer">
+                    <mat-icon class="text-[#A8A8A8] text-[27px]">notifications_none</mat-icon>
+                    <div class="absolute top-[-10px] bg-[red] rounded-full right-[-8px] py-[2px] px-[8px] w-[23px] text-[12px]">
+                        3
+                    </div>
+                </div>
+                <select class="bg-transparent text-[#A8A8A8] font-semibold px-4 text-[14px] outline-none cursor-pointer"
+                    value="SREEKUMAR">
+                    <option selected>SREEKUMAR</option>
+                    <option value="s">s</option>
+                    <option value="a">a</option>
+                </select>
+
+                <div class="text-[#A8A8A8] font-semibold text-[14px] mb-0 border-l-2 border-[#A8A8A8] px-4 mx-2 cursor-pointer">العربية
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

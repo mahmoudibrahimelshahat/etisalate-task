@@ -1,0 +1,60 @@
+<div class="lg:mx-28 md:mx-28 mx-3">
+    <mat-card>
+        <mat-card-content>
+            <button (click)="onBack()"
+                class="flex items-center text-[red]"><mat-icon>keyboard_arrow_left</mat-icon>Back</button>
+            <div class="lg:mx-14 my-4">
+                <h2 class="text-[23px] font-semibold tracking-wider">User Details</h2>
+            </div>
+
+            <div class="lg:mx-14 lg:my-12 my-2">
+                <p class="text-[#363434] text-[14px] font-medium tracking-wider">USER DETAILS</p>
+            </div>
+
+            <div class="lg:mx-14 lg:my-12 my-2" [formGroup]="userDetailsForm">
+                <div class="lg:grid lg:grid-cols-2 gap-2">
+                    <mat-form-field class="mb-2 text-white w-full"> 
+                        <input type="text" matInput placeholder="First Name" formControlName="firstName">
+                        <mat-error
+                        *ngIf="getFormControl('firstName')?.hasError('required') && getFormControl('firstName')?.touched">
+                        First Name is required</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="mb-2 text-white w-full"> 
+                        <input type="text" matInput placeholder="Last Name" formControlName="lastName">
+                        <mat-error
+                        *ngIf="getFormControl('lastName')?.hasError('required') && getFormControl('lastName')?.touched">
+                        Last Name is required</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="mb-2 text-white w-full"> 
+                        <input type="text" matInput placeholder="Email Address" formControlName="email">
+                        <mat-error
+                        *ngIf="getFormControl('email')?.hasError('required') && getFormControl('email')?.touched">
+                        Email is required</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="mb-2 text-white w-full">
+                        <ngx-mat-intl-tel-input matInput [preferredCountries]="['ae']"
+                            [enablePlaceholder]="true" placeholder="Enter Number"
+                            [enableSearch]="true" name="phone" formControlName="phone"
+                            #phone1></ngx-mat-intl-tel-input>
+                        <mat-error
+                            *ngIf="getFormControl('phone')?.hasError('required') && getFormControl('phone')?.touched">
+                            telephone is required</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <hr>
+
+            <div (click)="onSubmit()" class="flex justify-end my-4">
+                <button mat-flat-button color="warn">Select A Role</button>
+            </div>
+
+
+
+        </mat-card-content>
+    </mat-card>
+
+</div>
